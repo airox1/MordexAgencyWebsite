@@ -29,19 +29,16 @@ const Navbar = () => {
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
-          {/* Logo Placeholder - Now Navy/Orange */}
-          <div style={{ 
-            width: '40px', 
-            height: '40px', 
-            background: 'var(--navy-primary)', 
-            borderRadius: '4px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: '700',
-            fontSize: '1.2rem',
-            color: '#FFFFFF'
-          }}>M</div>
+          {/* Your Custom Logo */}
+          <img 
+            src="/logo.png" 
+            alt="Mordex Logo" 
+            style={{ 
+              height: '56px', 
+              width: '56px',
+              objectFit: 'contain'
+            }} 
+          />
           <span style={{ fontWeight: '800', letterSpacing: '1px', fontSize: '1.25rem', color: 'var(--navy-primary)' }}>MORDEX</span>
         </a>
         

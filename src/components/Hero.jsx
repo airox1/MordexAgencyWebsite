@@ -3,8 +3,39 @@ import RoiSimulator from './RoiSimulator';
 
 const Hero = () => {
   return (
-    <section className="section section-bg-secondary" style={{ paddingTop: '8rem', paddingBottom: '6rem' }}>
-      <div className="container">
+    <section className="section section-bg-secondary" style={{ paddingTop: '8rem', paddingBottom: '6rem', position: 'relative', overflow: 'hidden' }}>
+      
+      {/* Background Video */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0
+        }}
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Corporate Overlay (Removed CSS Blur to fix massive FPS lag) */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'rgba(244, 247, 250, 0.85)', /* 85% opacity light gray */
+        zIndex: 0
+      }}></div>
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="grid-2">
           
           {/* Left Side: Messaging */}

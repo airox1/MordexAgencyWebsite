@@ -28,12 +28,25 @@ const Process = () => {
               </p>
             </div>
             
-            <div style={{ marginTop: '2.5rem' }}>
-              <p style={{ fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--accent-cta)' }}>
-                Founder & Lead Developer
+            <div style={{ marginTop: '3rem' }}>
+              {/* Signature Graphic */}
+              <div style={{ marginBottom: '0.5rem' }}>
+                <img 
+                  src="/signature.png" 
+                  alt="Aidan Rodriguez Signature" 
+                  style={{ 
+                    maxHeight: '120px', 
+                    maxWidth: '100%', 
+                    opacity: 0.9,
+                    filter: 'invert(1)' /* Flips black to white! */
+                  }} 
+                />
+              </div>
+              <p style={{ color: '#FFFFFF', fontSize: '1.2rem', fontWeight: '600', marginBottom: '0.1rem' }}>
+                Aidan Rodriguez
               </p>
-              <p style={{ color: '#FFFFFF', fontSize: '1.5rem', fontFamily: 'serif', fontStyle: 'italic', marginTop: '0.5rem' }}>
-                Jacksonville, FL
+              <p style={{ fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase', fontSize: '0.8rem', color: 'var(--accent-cta)' }}>
+                Founder & Lead Developer • Jacksonville, FL
               </p>
             </div>
           </div>
@@ -48,7 +61,7 @@ const Process = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--navy-primary)', marginBottom: '0.5rem' }}>Direct Communication</h4>
-                  <p className="text-muted" style={{ fontSize: '0.95rem' }}>No confusing account managers or getting lost in the shuffle. You work directly with the person building your business.</p>
+                  <p style={{ color: '#4B5563', fontSize: '0.95rem' }}>No confusing account managers or getting lost in the shuffle. You work directly with the person building your business.</p>
                 </div>
               </div>
             </div>
@@ -60,7 +73,7 @@ const Process = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--navy-primary)', marginBottom: '0.5rem' }}>Agile & Fast</h4>
-                  <p className="text-muted" style={{ fontSize: '0.95rem' }}>Without corporate bureaucracy, we can launch your site and adapt to market changes faster than large firms.</p>
+                  <p style={{ color: '#4B5563', fontSize: '0.95rem' }}>Without corporate bureaucracy, we can launch your site and adapt to market changes faster than large firms.</p>
                 </div>
               </div>
             </div>
@@ -72,7 +85,7 @@ const Process = () => {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: 'var(--navy-primary)', marginBottom: '0.5rem' }}>Local Partnership</h4>
-                  <p className="text-muted" style={{ fontSize: '0.95rem' }}>I succeed when your local business grows. I treat your revenue like my own investment.</p>
+                  <p style={{ color: '#4B5563', fontSize: '0.95rem' }}>I succeed when your local business grows. I treat your revenue like my own investment.</p>
                 </div>
               </div>
             </div>

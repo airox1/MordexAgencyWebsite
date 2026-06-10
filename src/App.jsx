@@ -27,8 +27,17 @@ function App() {
         fontSize: '0.9rem',
       }}>
         <div className="container">
-          <div style={{ marginBottom: '1.5rem', fontWeight: '800', letterSpacing: '1px', fontSize: '1.25rem', color: '#FFFFFF' }}>
-            MORDEX
+          <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+            <img 
+              src="/logo.png" 
+              alt="Mordex Logo" 
+              style={{ 
+                height: '32px', 
+                filter: 'brightness(0) invert(1)', /* Creates a clean white silhouette for the dark footer */
+                opacity: 0.9 
+              }} 
+            />
+            <span style={{ fontWeight: '800', letterSpacing: '1px', fontSize: '1.25rem', color: '#FFFFFF' }}>MORDEX</span>
           </div>
           <p>&copy; {new Date().getFullYear()} Mordex Agency. Jacksonville, FL. All rights reserved.</p>
         </div>
