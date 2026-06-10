@@ -32,7 +32,7 @@ const Process = () => {
               {/* Signature Graphic */}
               <div style={{ marginBottom: '0.5rem' }}>
                 <img 
-                  src="/signature.png" 
+                  src={`${import.meta.env.BASE_URL}signature.png`}
                   alt="Aidan Rodriguez Signature" 
                   style={{ 
                     maxHeight: '120px', 

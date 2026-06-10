@@ -21,7 +21,7 @@ const Hero = () => {
           zIndex: 0
         }}
       >
-        <source src="/hero-bg.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}hero-bg.mp4`} type="video/mp4" />
       </video>
 
       {/* Corporate Overlay (Removed CSS Blur to fix massive FPS lag) */}

@@ -29,7 +29,7 @@ function App() {
         <div className="container">
           <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
             <img 
-              src="/logo.png" 
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Mordex Logo" 
               style={{ 
                 height: '32px', 

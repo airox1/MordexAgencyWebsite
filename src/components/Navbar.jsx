@@ -31,7 +31,7 @@ const Navbar = () => {
         <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
           {/* Your Custom Logo */}
           <img 
-            src="/logo.png" 
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="Mordex Logo" 
             style={{ 
               height: '56px', 
