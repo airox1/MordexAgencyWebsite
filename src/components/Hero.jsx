@@ -3,90 +3,79 @@ import RoiSimulator from './RoiSimulator';
 
 const Hero = () => {
   return (
-    <section className="section section-bg-secondary" style={{ paddingTop: '8rem', paddingBottom: '6rem', position: 'relative', overflow: 'hidden' }}>
-      
-      {/* Background Video */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: 0
-        }}
-      >
-        <source src={`${import.meta.env.BASE_URL}hero-bg.mp4`} type="video/mp4" />
-      </video>
-
-      {/* Corporate Overlay (Removed CSS Blur to fix massive FPS lag) */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'rgba(244, 247, 250, 0.85)', /* 85% opacity light gray */
-        zIndex: 0
-      }}></div>
-
+    <section 
+      style={{ 
+        position: 'relative', 
+        paddingTop: '10rem', // Account for navbar
+        paddingBottom: '8rem', // Extra padding at bottom for the overlap effect
+        backgroundColor: 'var(--navy-primary)',
+        color: '#FFFFFF',
+        overflow: 'visible' // CRITICAL: Allows the card to bleed out of the section
+      }}
+    >
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="grid-2">
+        
+        {/* We return to the proven F-Pattern Grid, but unified and floating */}
+        <div className="grid-2" style={{ alignItems: 'flex-start' }}>
           
-          {/* Left Side: Messaging */}
-          <div style={{ zIndex: 1 }}>
+          {/* Left Side: The Story */}
+          <div style={{ paddingTop: '2rem' }}>
             <span style={{ 
               color: 'var(--accent-cta)', 
               fontWeight: '700', 
-              letterSpacing: '1px',
+              letterSpacing: '1.5px',
               textTransform: 'uppercase',
+              fontSize: '0.85rem',
               display: 'block',
-              marginBottom: '1rem'
+              marginBottom: '1.5rem'
             }}>
               Jacksonville's ROI-Focused Web Partner
             </span>
             
-            <h1 className="heading-xl">
-              We build lead generation machines for local businesses.
+            <h1 className="heading-xl" style={{ color: '#FFFFFF' }}>
+              We engineer websites that make the phone <span className="ring-animate">ring.</span>
             </h1>
             
-            <p className="text-lead">
-              Stop losing local customers to competitors with better websites. 
-              We engineer high-converting digital experiences that turn clicks into phone calls and consultations.
+            <p className="text-lead" style={{ marginTop: '1.5rem', marginBottom: '2.5rem', color: '#E0E7FF' }}>
+              Stop leaving local market share on the table. Whether you need a massive upgrade or your very first site, we build bespoke digital assets that turn local searches into paying customers.
             </p>
             
-            <div style={{ display: 'flex', gap: '1rem', marginTop: 'var(--space-md)', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '1.5rem' }}>
               <a href="#contact" className="btn-primary">Get Your Free Web Audit</a>
-              <a href="#services" className="btn-secondary">View Our Services</a>
-            </div>
-            
-            {/* Trust Signals Under Hero CTA */}
-            <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '500' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-cta)' }}></div>
-                No Bloated Agency Fees
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-cta)' }}></div>
-                Direct Developer Access
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-cta)' }}></div>
-                Data-Driven Results
-              </div>
+              <a href="#services" style={{
+                backgroundColor: 'transparent',
+                color: '#FFFFFF',
+                fontWeight: '600',
+                padding: '14px 32px',
+                borderRadius: '6px',
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                transition: 'all 0.2s ease',
+                display: 'inline-block',
+                textAlign: 'center'
+              }}
+              onMouseOver={(e) => e.target.style.borderColor = '#FFFFFF'}
+              onMouseOut={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)'}
+              >View Our Services</a>
             </div>
           </div>
 
-          {/* Right Side: ROI Simulator */}
-          <div style={{ zIndex: 1 }}>
-            <RoiSimulator />
+          {/* Right Side: The Floating Logic (Overlaps the bottom edge) */}
+          <div style={{ 
+            position: 'relative',
+            zIndex: 10,
+            transform: 'translateY(15%)', 
+            color: 'var(--text-main)' /* CRITICAL: Resets text color so the calculator text isn't white */
+          }}>
+            <div style={{ 
+              boxShadow: '0 30px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05)', /* Deeper shadow + subtle border for dark mode contrast */
+              borderRadius: '8px',
+              backgroundColor: '#FFFFFF',
+              overflow: 'hidden'
+            }}>
+              <RoiSimulator />
+            </div>
           </div>
-
+          
         </div>
       </div>
     </section>
