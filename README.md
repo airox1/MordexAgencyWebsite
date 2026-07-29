@@ -5,7 +5,3 @@ This is the portfolio and lead-generation website for Mordex Agency. I built it 
 It's built with React, Vite, and completely custom CSS. 
 
 **Live Website:** [https://airox1.github.io/MordexAgencyWebsite/](https://airox1.github.io/MordexAgencyWebsite/)
-
-## How to run locally
-1. `npm install`
-2. `npm run dev`
